@@ -1,0 +1,62 @@
+<script>
+
+    // Data Pegawai
+    var Pegawai = "Ridwan";
+    var Jabatan = "Manager";
+    var Status = "Menikah";
+
+    // Menghitung Gaji
+    var gajiPokok = 0;
+    switch (Jabatan) {
+        case "Manager":
+            gajipokok = 15000000;
+            break;
+        case "Asisten Manager":
+            gajipokok = 10000000;
+            break;
+        case "Staff":
+            gajipokok = 5000000;
+            break;
+    }
+
+    var tunjanganjabatan = 0.15 * gajipokok;
+    var bpjs = 0.1 * gajipokok;
+    var tunjangankeluarga = Status === "Menikah" ? 0.2 * gajipokok : 0;
+    var totalgaji = gajipokok + tunjanganjabatan + bpjs + tunjangankeluarga;
+
+    // Tabel menggunakan document.write
+    document.write("<h2 align='center'>Data Pegawai</h2>");
+    document.write('<table border="1">');
+    document.write('<thead>');
+    document.write('<tr>');
+    document.write('<th>Nama Pegawai</th>');
+    document.write('<th>Jabatan</th>');
+    document.write('<th>Status</th>');
+    document.write('<th>Gaji Pokok</th>');
+    document.write('<th>Tunjangan Jabatan</th>');
+    document.write('<th>BPJS</th>');
+    document.write('<th>Tunjangan Keluarga</th>');
+    document.write('<th>Total Gaji</th>');
+    document.write('</tr>');
+    document.write('</thead>');
+    document.write('<tbody>');
+    document.write('<tr>');
+    document.write('<td>' + Pegawai + '</td>');
+    document.write('<td>' + Jabatan + '</td>');
+    document.write('<td>' + Status + '</td>');
+    document.write('<td>' + gajipokok + '</td>');
+    document.write('<td>' + tunjanganjabatan + '</td>');
+    document.write('<td>' + bpjs + '</td>');
+    document.write('<td>' + tunjangankeluarga + '</td>');
+    document.write('<td>' + totalgaji + '</td>');
+    document.write('</tr>');
+    document.write('</tbody>');
+    document.write('<tfoot>');
+    document.write('<tr>');
+    document.write('<td colspan="7">Total Gaji: </td>');
+    document.write('<td>' + totalgaji + '</td>');
+    document.write('</tr>');
+    document.write('</tfoot>');
+    document.write('</table>');
+
+</script>
